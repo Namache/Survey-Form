@@ -1,15 +1,42 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
   <html>
     <head>
-      <title></title>
+      <title>Health Paws Vet Clinic Satisfaction Survey</title>
       <meta lang='en'>
       <meta charset='utf-8'>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
         <h1 id='title'>Satisfaction Survey</h1>
         <h2 id='subtitle'>Vet Clinic "Healthy Paws"</h2>
         <p id='description'>We value your time and feedback. Please fill out the form below.</p>
 
-        <form id='survey-form'></form>
+        <form id='survey-form'>
+          <fieldset>
+            <label id="name-label">Name <input id='name' type='text' required></input></label>
+            <label id="email-label">E-mail <input type='email' id='email' name='email' required></input></label>
+            </fieldset>
+            <fieldset>
+              <legend>Waiting time</legend>
+              <label id='number-label'>How much time did you wait in the waiting room (minutes)? <input type='number' name='waiting-time' id='number' min=0 max=480></input></label>
+            </fieldset>
+
+            <fieldset>
+              <label>Who assisted you at the reception?
+                <select name='assistant-helped' id='dropdown'>
+                  <option>Select</option>
+                  <option>Mariana Baiter</option>
+                  <option>Jack Krauss</option>
+                  <option>Alice Cooper</option>
+                  </select>
+              </label>
+            </fieldset>
+            <fieldset>
+              <label for>Your furry friend is a...<input checked name='animal-type' id='cat' type='radio'></input> Cat</label>
+              <input name='animal-type' id='dog' type='radio'> Dog</input>
+              <input name='animal-type' id='bunny' type='radio'> Bunny</input>
+              <input name='animal-type' type='radio'> Other</input>
+              </fieldset>
+        </form>
         </body>
     </html>
