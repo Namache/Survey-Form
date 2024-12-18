@@ -1,42 +1,87 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Health Paws Vet Clinic Satisfaction Survey</title>
-      <meta lang='en'>
-      <meta charset='utf-8'>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body>
-        <h1 id='title'>Satisfaction Survey</h1>
-        <h2 id='subtitle'>Vet Clinic "Healthy Paws"</h2>
-        <p id='description'>We value your time and feedback. Please fill out the form below.</p>
+<html lang="en">
+  <head>
+    <title>Health Paws Vet Clinic Satisfaction Survey</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Satisfaction Survey</h1>
+    <h2 id="subtitle">Vet Clinic "Healthy Paws"</h2>
+    <p id="description">We value your time and feedback. Please fill out this form below.</p>
 
-        <form id='survey-form'>
-          <fieldset>
-            <label id="name-label">Name <input id='name' type='text' required></input></label>
-            <label id="email-label">E-mail <input type='email' id='email' name='email' required></input></label>
-            </fieldset>
-            <fieldset>
-              <legend>Waiting time</legend>
-              <label id='number-label'>How much time did you wait in the waiting room (minutes)? <input type='number' name='waiting-time' id='number' min=0 max=480></input></label>
-            </fieldset>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">
+          Name 
+          <input placeholder="First and last name" id="name" type="text" required>
+        </label>
+        <label id="email-label" for="email">
+          E-mail 
+          <input placeholder="JackSparrow@hpaws.com" id="email" type="email" name="email" required>
+        </label>
+      </fieldset>
 
-            <fieldset>
-              <label>Who assisted you at the reception?
-                <select name='assistant-helped' id='dropdown'>
-                  <option>Select</option>
-                  <option>Mariana Baiter</option>
-                  <option>Jack Krauss</option>
-                  <option>Alice Cooper</option>
-                  </select>
-              </label>
-            </fieldset>
-            <fieldset>
-              <label for>Your furry friend is a...<input checked name='animal-type' id='cat' type='radio'></input> Cat</label>
-              <input name='animal-type' id='dog' type='radio'> Dog</input>
-              <input name='animal-type' id='bunny' type='radio'> Bunny</input>
-              <input name='animal-type' type='radio'> Other</input>
-              </fieldset>
-        </form>
-        </body>
-    </html>
+      <fieldset>
+        <legend>Waiting time</legend>
+        <label id="number-label" for="number">
+          How much time did you wait in the waiting room (minutes)? 
+          <input placeholder="15" id="number" type="number" name="waiting-time" min="0" max="480">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Who assisted you at the reception?</legend>
+        <label for="dropdown">
+          <select name="assistant-helped" id="dropdown" required>
+            <option value="" disabled selected>Select</option>
+            <option value="mariana-baiter">Mariana Baiter</option>
+            <option value="jack-krauss">Jack Krauss</option>
+            <option value="alice-cooper">Alice Cooper</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your furry friend is a...</legend>
+        <label for="cat">
+          <input id="cat" name="animal-type" type="radio" value="cat" checked> Cat
+        </label>
+        <label for="dog">
+          <input id="dog" name="animal-type" type="radio" value="dog"> Dog
+        </label>
+        <label for="bunny">
+          <input id="bunny" name="animal-type" type="radio" value="bunny"> Bunny
+        </label>
+        <label for="other">
+          <input id="other" name="animal-type" type="radio" value="other"> Other
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Which statement best describes our clinic? (You can select multiple choices)</legend>
+        <label>
+          <input name="clinic-description" type="checkbox" value="clean-and-tidy"> Clean and tidy
+        </label>
+        <label>
+          <input name="clinic-description" type="checkbox" value="friendly-and-cozy"> Friendly and cozy
+        </label>
+        <label>
+          <input name="clinic-description" type="checkbox" value="professional-and-helpful"> Professional and helpful
+        </label>
+        <label>
+          <input name="clinic-description" type="checkbox" value="calm-and-respectful"> Calm and respectful
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label>
+          Here you can add anything extra...
+          <textarea placeholder='My visit at "Healthy Paws" was...'></textarea>
+        </label>
+      </fieldset>
+      <button id="submit">Submit</button>
+    </form>
+  </body>
+</html>
